@@ -13,8 +13,24 @@ namespace NASLEDOVANIE_OOP
         public void ActivituHuman() 
         {
             Console.WriteLine("Обычный человек~Пойти в магаз и похавать на все деньги +20хп");
-            Health += 20;
-            
+            Status = 5;
+        }
+
+        public void C (int HealthHuman)
+        {
+            Console.WriteLine("-------------------------------");
+            Health += HealthHuman;
+            Console.WriteLine(Health);
+            ActivituHuman();
+            Console.WriteLine(Health);
+            Console.WriteLine("-------------------------------");
+            EntrBeep();
+        }
+
+        public void EntrBeep ()
+        {
+            Console.ReadKey();
+            Console.Beep();
         }
 
     }

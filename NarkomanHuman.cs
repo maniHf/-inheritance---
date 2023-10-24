@@ -11,8 +11,18 @@ namespace NASLEDOVANIE_OOP
         public void ActivituNarkomanHuman ()
         {
             Console.WriteLine("Наркоман~Найти клад удачи в тюряге - 100 хп");
-            Health -= 100; // смерть
             Status -= 8; // чооооооо минус сошиал кредит левел 
+        }
+
+        public void  A (int HealthNarkoman)
+        {
+            Console.WriteLine("-------------------------------");
+            Health -= HealthNarkoman;
+            Console.WriteLine(Health);
+            ActivituNarkomanHuman();
+            Console.WriteLine(Health);
+            Console.WriteLine("-------------------------------");
+            EntrBeep();
         }
     }
 }
